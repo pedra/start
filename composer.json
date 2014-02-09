@@ -26,7 +26,7 @@
 		"php": ">=5.4.0"
 	},
 	"scripts": {
-		"post-create-project-cmd": ["php php/neso/start/install"]
+		"post-create-project-cmd": ["php php/neos/start/install"]
 	},
 	"minimum-stability": "dev"
 }
