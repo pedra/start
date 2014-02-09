@@ -5,6 +5,7 @@ defined('LIB')      || define('LIB', PPHP . 'lib/');
 
 //Auxiliar Functions
 include LIB.'start/autoload.php';
+include LIB.'start/utils.php';
 
 //Defines for template
 defined('ROOT')     || define('ROOT', dirname($_SERVER['DOCUMENT_ROOT'] . $_SERVER['SCRIPT_NAME']) . '/');
