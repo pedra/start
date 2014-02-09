@@ -20,7 +20,7 @@
 		"bin-dir": "php/lib/bin"
 	},
 	"archive": {
-        	"exclude": ["/Documents", "/doc", "/*.json", "/*.git"]
+	"exclude": ["/Documents", "/doc", "/*.json", "/*.git", "/*.md"]
     	},
 	"require": {
 		"php": ">=5.4.0"
