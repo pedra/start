@@ -1,0 +1,56 @@
+/* 
+    Created on : 18/01/2014, 17:44:30
+    Author     : Bill Rocha <prbr@ymail.com at http://billrocha.tk>
+
+*/
+@import url(http://fonts.googleapis.com/css?family=Bad+Script|Oxygen+Mono|Oswald:400,300);
+*{padding:0; margin:0; font-family: 'Oxigen Mono', Arial}
+/*body{ background: url(../img/b.jpg) 0 0 fixed; background-attachment: cover}*/
+body { background: linear-gradient(to bottom, #036 , #000);}
+p,a,li,td,span{font-size: 13px; padding: 2px 0 5px 0}
+img {width:100%}
+
+
+.container { width: 853px; margin: 0 auto;}
+.top { padding: 10px 5px}
+.top a img {width: 110px}
+.top div.topmenu {float:right; margin: 30px 5px 0 0; color: #9A0}
+.top div.topmenu a { display: inline-block; padding: 5px; text-decoration: none; color:#9A0}
+.top div.topmenu a:hover {text-decoration: underline}
+
+.splash {background: #000; margin: 0 5px 20px 5px; width:842px; height: 500px; border:none}
+
+.destaque div {float:left; width: 183px; margin:5px; min-height: 210px; padding: 10px; background: #123}
+.destaque div *{color:#000; text-decoration: none;}
+.destaque div:hover * {color:#FFF}
+.destaque div:hover img {opacity: 1}
+.destaque div img {display: block; opacity: 0.8; margin:-10px; width:203px}
+.destaque div h2 {position:absolute; width: 183px; margin: -100px -10px -10px -10px; padding:10px;font-size: 1.5em; color:#CCC; 
+                  font-weight: normal; font-family: "Oswald", sans-serif; text-shadow: 0 0 15px #000; background: rgba(40,40,40,0.6) }
+.destaque div p { font-size: 0.8em; color:#000 !important}
+
+
+textarea {position: absolute; height: 90%; font-family: Calibre}
+
+
+
+.footer {clear:both; height: 200px; padding: 30px 5px; color:#123}
+
+
+/* Media Query */
+@media (max-width : 860px) {
+  .top {background: #000}
+  .top div {width:100%;}
+  .container, .footer { margin:0 auto; width: 100%; padding:30px 10px 10px 10px; font-size: 1.1em}
+  blockquote { font-size: 1.3em}
+  h1 { font-size: 3em}
+  .splash{ width: 100%; height: 480px; margin: -10px; margin-top: 0}
+}
+@media (max-width : 460px) {
+  .top {}
+  .top div {width:100%;}
+  .container, .footer { width: 100%; padding: 30px 10px 10px 10px; font-size: 0.8em}
+  blockquote { font-size: 1.3em}
+  h1 { font-size: 2em}
+  .splash{ width: 100%; height: 220px ; margin: -10px; margin-top: 0}
+}

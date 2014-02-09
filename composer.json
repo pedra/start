@@ -20,13 +20,13 @@
 		"bin-dir": "php/lib/bin"
 	},
 	"archive": {
-	"exclude": ["/Documents", "/doc", "/*.json", "/*.git", "/*.md"]
+        	"exclude": ["/Documents", "/doc", "/*.json", "/*.git", "/*.md"]
     	},
 	"require": {
 		"php": ">=5.4.0"
 	},
 	"scripts": {
-		"post-create-project-cmd": ["php php/neos/start/install"]
+		"post-create-project-cmd": ["php php/install"]
 	},
 	"minimum-stability": "dev"
 }
