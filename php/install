@@ -4,4 +4,4 @@
 exec('explorer http://localhost');
 
 //start server
-exec('cd '.dirname(__DIR__).' & php -S localhost');
+exec('cd '.dirname(__DIR__).' & php -S localhost:80');
