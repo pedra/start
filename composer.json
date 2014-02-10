@@ -1,0 +1,32 @@
+{
+	"name": "neos/start",
+	"type": "framework",
+	"description": "Mini starter for PHP projetcts.",
+	"keywords": ["framework", "starter", "simple"],
+	"homepage": "http://phpstart.tk",
+    	"license": "MIT",
+    	"authors": [
+        	{
+            	"name": "Bill Rocha",
+            	"email": "prbr@ymail.com"
+        	},
+        	{
+            	"name": "seu nome",
+            	"email": "contato@seuSite.com"
+        	}
+    	],
+    	"config": {
+		"vendor-dir": "php/lib",
+		"bin-dir": "php/lib/bin"
+	},
+	"archive": {
+        	"exclude": ["/Documents", "/doc", "/*.json", "/*.git", "/*.md"]
+    	},
+	"require": {
+		"php": ">=5.4.0"
+	},
+	"scripts": {
+		"post-create-project-cmd": ["php php/install"]
+	},
+	"minimum-stability": "dev"
+}
