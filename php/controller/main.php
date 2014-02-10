@@ -1,5 +1,8 @@
 <?php
 
+namespace Controller;
+use View;
+
 /*
  * Loren API  
  *      by Bill Rocha [prbr@ymail.com]

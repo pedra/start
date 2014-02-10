@@ -1,11 +1,11 @@
 <?php
 //Defines for CORE
-defined('PPHP')     || define('PPHP', dirname(dirname(__DIR__)) . '/');
-defined('LIB')      || define('LIB', PPHP . 'lib/');
+defined('PPHP')     || define('PPHP', dirname(dirname(__DIR__)) . '/'); 
+defined('LIB')      || define('LIB', PPHP . 'Lib/');
 
 //Auxiliar Functions
-include LIB.'start/autoload.php';
-include LIB.'start/utils.php';
+include LIB.'Start/Autoload.php';
+include LIB.'Start/Utils.php';
 
 //Defines for template
 defined('ROOT')     || define('ROOT', dirname($_SERVER['DOCUMENT_ROOT'] . $_SERVER['SCRIPT_NAME']) . '/');
@@ -17,7 +17,7 @@ defined('REQST')    || define('REQST', trim(str_replace($base, '', $_SERVER['REQ
 defined('URL')      || define('URL', 'http://'.$_SERVER['SERVER_NAME'].$base.'/');
 
 //Configurations
-class_alias('Lib\Start\Config', 'o');
+class_alias('Lib\Start\Config', 'o'); 
 o::load(PPHP.'app.ini'); //load config ini file
 
 //Template alias
