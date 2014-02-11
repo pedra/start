@@ -8,7 +8,7 @@ class Controller {
     private $url = '';
     private $mask = array();
     private $path = '';
-    private $controller = 'Controller\Main';
+    private $controller = 'Main';
     private $action = 'index';
     private $parms = array();
     private $p404 = false;
