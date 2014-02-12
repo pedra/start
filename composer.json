@@ -20,7 +20,8 @@
         "exclude": ["/Documents", "/doc", "/*.json", "/*.git", "/*.md"]
     },
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.4.0",
+        "neos/html": "dev-master"
     },
     "minimum-stability": "dev"
 }
