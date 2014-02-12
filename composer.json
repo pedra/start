@@ -14,7 +14,9 @@
         "exclude": ["*.json", "*.git", "*.md", ".gitignore", "/.git"]
     },
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.4.0",
+        "neos/data": "dev-master",
+        "neos/html": "dev-master"
     },
     "suggest": {
         "neos/start-skel": "Basic starter for PHP web projects"
