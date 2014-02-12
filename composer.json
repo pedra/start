@@ -1,0 +1,28 @@
+{
+    "name": "neos/start",
+    "description": "Simple basic start for PHP web projects",
+    "keywords": ["framework", "starter", "core"],
+    "homepage": "http://github.com/pedra/start",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Bill Rocha",
+        "email": "prbr@ymail.com",
+        "homepage": "http://billrocha.tk"
+    }],
+    "archive": {
+        "exclude": ["*.json", "*.git", "*.md", ".gitignore", "/.git"]
+    },
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "suggest": {
+        "neos/start-skel": "Basic starter for PHP web projects"
+    },
+    "autoload": {
+        "psr-0": {
+            "Neos": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
