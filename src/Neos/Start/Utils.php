@@ -1,6 +1,7 @@
 <?php
 
 namespace Neos\Start;
+use o;
 
 class Utils {
 
@@ -11,7 +12,8 @@ class Utils {
 		    function($class){
 		        $class = str_replace('\\', '/', trim($class, '\\'));
 		        if($m = strpos($class, 'Model/') !== false){
-		            require_once  o::app('model') . substr($class, $p + 1) . '.php';
+		        	if($m != 5) return false;
+		            require_once  o::app('model') . substr($class, $m + 5) . '.php';
 		            return true;
 		        } else return false;
 		    }
