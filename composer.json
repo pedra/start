@@ -18,9 +18,6 @@
         "neos/data": "dev-master",
         "neos/html": "dev-master"
     },
-    "suggest": {
-        "neos/start-skel": "Basic starter for PHP web projects"
-    },
     "autoload": {
         "psr-0": {
             "Neos": "src/"
