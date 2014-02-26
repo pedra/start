@@ -35,14 +35,18 @@ class Output {
      * TODO: pleasy, make tests . . .
      *
      */
-    function download($ext, $path){
+    function download($file){
+
+        $ext = explode('.', $file);
+        $ext = end($ext);
+
         //search for mime type
-        include o::app('config').'mimes.php';
+        include __DIR__.'Helpers/mimes.php';
         if (!isset($_mimes[$ext])) $mime = 'text/plain';
         else $mime = (is_array($_mimes[$ext])) ? $_mimes[$ext][0] : $_mimes[$ext];
         
         //get file
-        $dt = file_get_contents($path);
+        $dt = file_get_contents($file);
         
         //download
         ob_end_clean();
@@ -51,11 +55,11 @@ class Output {
         header('Vary: Accept-Language, Accept-Encoding');
         header('Content-Type: ' . $mime);
         header('Expires: ' . gmdate('D, d M Y H:i:s', time() + 31536000) . ' GMT');
-        header('Last-Modified: ' . gmdate('D, d M Y H:i:s', filemtime($path)) . ' GMT');
+        header('Last-Modified: ' . gmdate('D, d M Y H:i:s', filemtime($file)) . ' GMT');
         header('Cache-Control: must_revalidate, public, max-age=31536000');
         header('Content-Length: ' . strlen($dt));
         header('x-Server: nfw/RunPHP');
-        header('ETAG: '.md5($path));
+        header('ETAG: '.md5($file));
         exit($dt);
     }
     
@@ -75,7 +79,7 @@ class Output {
             $db->query("INSERT INTO ".o::log('table')." 
                         (IP, REQUEST, AGENT, USER)
                         VALUES ('".$_SERVER['REMOTE_ADDR']."', '".URL.REQST."', '".$_SERVER['HTTP_USER_AGENT']."', 0)");            
-        } elseif($mode == 'file') file_put_contents(o::log('file'), date('YdmHis').' | '.$msg);
+        } elseif($mode == 'file') file_put_contents(o::log('file'), date('YdmHis').' | '.$msg, FILE_APPEND);
     }
     
     /* Status Bar
